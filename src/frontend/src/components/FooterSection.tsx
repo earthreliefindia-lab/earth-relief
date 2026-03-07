@@ -64,7 +64,7 @@ export default function FooterSection() {
                 Earth Relief
               </span>
             </a>
-            <p className="text-white/40 text-sm leading-relaxed max-w-52">
+            <p className="text-white/60 text-sm leading-relaxed max-w-52">
               Healing the Earth, One Choice at a Time.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function FooterSection() {
           {/* Footer columns */}
           {footerColumns.map((col) => (
             <div key={col.heading}>
-              <h4 className="font-heading text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
+              <h4 className="font-heading text-sm font-semibold text-white/75 uppercase tracking-wider mb-4">
                 {col.heading}
               </h4>
               <ul className="space-y-2.5">
@@ -81,7 +81,7 @@ export default function FooterSection() {
                     <a
                       href={link.href}
                       data-ocid="footer.link"
-                      className="text-white/40 text-sm hover:text-white/80 transition-colors duration-200"
+                      className="text-white/50 text-sm hover:text-white/85 transition-colors duration-200"
                     >
                       {link.label}
                     </a>

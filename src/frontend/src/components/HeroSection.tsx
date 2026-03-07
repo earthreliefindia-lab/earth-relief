@@ -98,7 +98,7 @@ function LeafSVG({ width, height }: { width: number; height: number }) {
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
       {/* Background image */}
@@ -135,31 +135,31 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Eyebrow */}
-          <span className="inline-block mb-6 px-4 py-1.5 rounded-full border border-white/30 text-white/80 text-xs font-semibold tracking-widest uppercase bg-white/10 backdrop-blur-sm">
+          <span className="inline-block mb-8 px-5 py-2 rounded-full border border-white/25 text-white/85 text-[0.65rem] font-bold tracking-[0.12em] uppercase bg-white/8 backdrop-blur-sm">
             Sustainability · Innovation · Impact
           </span>
 
           {/* Headline */}
-          <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight mb-6">
+          <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[6rem] xl:text-[7rem] font-bold text-white leading-[1.02] tracking-tight mb-6">
             Healing the Earth,{" "}
-            <span className="block italic font-light text-white/80">
+            <span className="block italic font-light text-white/90">
               One Choice at a Time
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-white/70 text-xl md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed">
             Replacing single-use plastics. Restoring ecosystems. Building a
             sustainable future for all.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Button
               size="lg"
               asChild
               data-ocid="hero.primary_button"
-              className="bg-primary text-primary-foreground hover:opacity-90 font-semibold px-8 py-3 text-base transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
+              className="bg-primary text-primary-foreground hover:opacity-90 font-semibold rounded-full px-10 py-3 text-base transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
             >
               <a href="#mission">Explore Our Mission</a>
             </Button>
@@ -168,7 +168,7 @@ export default function HeroSection() {
               variant="outline"
               asChild
               data-ocid="hero.secondary_button"
-              className="border-white/50 text-white bg-transparent hover:bg-white/10 hover:border-white font-semibold px-8 py-3 text-base transition-all duration-300"
+              className="border-white/50 text-white bg-transparent hover:bg-white/10 hover:border-white font-semibold rounded-full px-10 py-3 text-base transition-all duration-300"
             >
               <a href="#products">Shop Eco Products</a>
             </Button>
@@ -178,7 +178,7 @@ export default function HeroSection() {
         {/* Scroll indicator */}
         <a
           href="#mission"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hover:text-white/80 transition-colors flex flex-col items-center gap-2 animate-bounce"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 hover:text-white/80 transition-colors flex flex-col items-center gap-2 animate-bounce"
           aria-label="Scroll down"
         >
           <span className="text-xs tracking-widest uppercase font-medium">

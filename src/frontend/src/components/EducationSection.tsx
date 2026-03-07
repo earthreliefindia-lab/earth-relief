@@ -15,14 +15,14 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-24 lg:py-32 bg-background"
+      className="py-28 lg:py-40 bg-background"
       data-ocid="education.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div ref={contentRef}>
-            <span className="inline-block mb-5 text-primary text-xs font-semibold tracking-widest uppercase">
+            <span className="eyebrow-pill mb-5 inline-flex">
               Social Mission
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight leading-tight">
@@ -43,7 +43,7 @@ export default function EducationSection() {
               {programs.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-secondary/15 border border-secondary/25 hover:bg-secondary/25 transition-colors duration-200"
+                  className="flex items-center gap-3 p-4 rounded-2xl bg-white card-shadow border-0 hover:shadow-card-lg transition-all duration-200"
                 >
                   <div className="shrink-0 w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <Icon size={18} strokeWidth={1.5} />
@@ -56,7 +56,7 @@ export default function EducationSection() {
             </div>
 
             {/* Future initiative note */}
-            <div className="p-5 rounded-xl bg-accent/50 border border-accent/60">
+            <div className="p-6 rounded-2xl bg-primary/6 border border-primary/15">
               <p className="text-sm text-foreground/70 leading-relaxed">
                 <span className="font-semibold text-foreground">
                   Coming Soon:
@@ -70,7 +70,7 @@ export default function EducationSection() {
 
           {/* Image */}
           <div ref={imageRef} className="delay-200">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] card-shadow-lg">
               <img
                 src="/assets/generated/education-program.dim_800x600.jpg"
                 alt="Education and awareness program"

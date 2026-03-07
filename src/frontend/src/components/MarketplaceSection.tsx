@@ -32,18 +32,12 @@ export default function MarketplaceSection({
   return (
     <section
       id="marketplace"
-      className="py-24 lg:py-32"
-      style={{
-        background: "oklch(88 0.025 145 / 0.25)",
-        backgroundColor: "oklch(90 0.02 120)",
-      }}
+      className="py-28 lg:py-40 bg-secondary/40"
       data-ocid="marketplace.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div ref={headerRef} className="text-center mb-16">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            Eco Marketplace
-          </span>
+          <span className="eyebrow-pill mb-5 inline-flex">Eco Marketplace</span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5 tracking-tight">
             A Platform for the Planet's Brands
           </h2>
@@ -67,7 +61,7 @@ export default function MarketplaceSection({
             size="lg"
             onClick={onPartnerClick}
             data-ocid="marketplace.primary_button"
-            className="bg-primary text-primary-foreground hover:opacity-90 font-semibold px-10 py-3 text-base shadow-md hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+            className="bg-primary text-primary-foreground hover:opacity-90 font-semibold rounded-full px-12 py-3 text-base shadow-md hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
           >
             Register as a Vendor
           </Button>
@@ -94,7 +88,7 @@ function PillarCard({
   return (
     <div
       ref={ref}
-      className={`card-hover group text-center rounded-2xl p-8 bg-card border border-border/50 hover:border-primary/30 cursor-default ${delay}`}
+      className={`card-hover group text-center rounded-3xl p-9 bg-white card-shadow border-0 cursor-default ${delay}`}
     >
       <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300 mx-auto">
         <Icon size={24} strokeWidth={1.5} />

@@ -54,14 +54,12 @@ export default function PartnerSection() {
   return (
     <section
       id="partner"
-      className="py-24 lg:py-32 bg-muted/40"
+      className="py-28 lg:py-40 bg-secondary/40"
       data-ocid="partner.section"
     >
       <div className="container mx-auto px-6 lg:px-8 max-w-2xl">
         <div ref={headerRef} className="text-center mb-12">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            Collaboration
-          </span>
+          <span className="eyebrow-pill mb-5 inline-flex">Collaboration</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             Grow With Us
           </h2>
@@ -76,7 +74,7 @@ export default function PartnerSection() {
           {submitted ? (
             <div
               data-ocid="partner.success_state"
-              className="text-center p-12 rounded-2xl bg-card border border-primary/20"
+              className="text-center p-12 rounded-3xl bg-white card-shadow border-0"
             >
               <div className="w-16 h-16 rounded-full bg-primary/15 text-primary flex items-center justify-center mx-auto mb-5">
                 <svg
@@ -112,7 +110,7 @@ export default function PartnerSection() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl bg-card border border-border/60 p-8 space-y-5 shadow-sm"
+              className="rounded-3xl bg-white card-shadow border-0 p-10 space-y-5"
               noValidate
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -200,7 +198,7 @@ export default function PartnerSection() {
                 type="submit"
                 disabled={loading}
                 data-ocid="partner.submit_button"
-                className="w-full bg-primary text-primary-foreground hover:opacity-90 font-semibold py-3 text-base transition-all duration-300"
+                className="w-full bg-primary text-primary-foreground hover:opacity-90 font-semibold rounded-full py-3 text-base transition-all duration-300"
               >
                 {loading ? (
                   <>

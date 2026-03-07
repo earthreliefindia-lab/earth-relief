@@ -59,9 +59,9 @@ function MissionCard({
   return (
     <div
       ref={ref}
-      className={`reveal-child card-hover group rounded-2xl p-7 bg-card border border-border/60 hover:border-primary/30 cursor-default ${delay ?? ""}`}
+      className={`reveal-child card-hover group rounded-3xl p-8 bg-white card-shadow border border-border/40 hover:border-primary/20 cursor-default ${delay ?? ""}`}
     >
-      <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300">
+      <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300">
         <Icon size={22} strokeWidth={1.5} />
       </div>
       <h3 className="font-heading text-xl font-semibold text-foreground mb-2.5">
@@ -78,16 +78,14 @@ export default function MissionSection() {
   return (
     <section
       id="mission"
-      className="py-24 lg:py-32 bg-background"
+      className="py-28 lg:py-40 bg-background"
       data-ocid="mission.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            Why We Exist
-          </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5 tracking-tight">
+          <span className="eyebrow-pill mb-5 inline-flex">Why We Exist</span>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5 tracking-tight leading-[1.1]">
             Our Mission
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">

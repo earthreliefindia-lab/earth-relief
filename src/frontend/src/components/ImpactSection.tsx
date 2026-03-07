@@ -75,13 +75,15 @@ function StatCard({ stat, active }: { stat: StatItem; active: boolean }) {
   const count = useCountUp(stat.value, 2000, active);
 
   return (
-    <div className="text-center px-4 py-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-      <div className="font-heading text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight">
+    <div className="text-center rounded-3xl px-6 py-10 border border-white/15 bg-white/8 backdrop-blur-sm">
+      <div className="font-heading text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
         {count.toLocaleString()}
-        <span className="text-primary/80">{stat.suffix}</span>
+        <span className="text-primary">{stat.suffix}</span>
       </div>
-      <div className="text-white font-semibold text-lg mb-2">{stat.label}</div>
-      <div className="text-white/50 text-sm leading-relaxed">
+      <div className="text-white/90 font-semibold text-lg mb-1.5">
+        {stat.label}
+      </div>
+      <div className="text-white/55 text-sm leading-relaxed">
         {stat.description}
       </div>
     </div>
@@ -145,7 +147,7 @@ export default function ImpactSection() {
     <section
       id="impact"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative overflow-hidden"
+      className="py-28 lg:py-40 relative overflow-hidden"
       style={{
         background: "oklch(24 0.1 145)",
       }}
@@ -162,8 +164,8 @@ export default function ImpactSection() {
       />
 
       <div className="relative container mx-auto px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block mb-4 text-primary/80 text-xs font-semibold tracking-widest uppercase">
+        <div className="text-center mb-16">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/20 text-white/70 text-[0.65rem] font-bold tracking-[0.12em] uppercase bg-white/8 mb-5">
             Our Impact
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">

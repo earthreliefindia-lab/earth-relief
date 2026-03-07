@@ -30,7 +30,7 @@ export default function Navigation({ onPartnerClick }: NavigationProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-xs border-b border-border"
+          ? "bg-white/98 backdrop-blur-lg shadow-[0_1px_20px_rgba(0,0,0,0.08)] border-b border-border/40"
           : "bg-transparent"
       }`}
     >
@@ -80,10 +80,10 @@ export default function Navigation({ onPartnerClick }: NavigationProps) {
           <Button
             onClick={onPartnerClick}
             data-ocid="nav.primary_button"
-            className={`font-semibold text-sm transition-all duration-300 ${
+            className={`font-semibold text-sm transition-all duration-300 rounded-full px-5 ${
               scrolled
                 ? "bg-primary text-primary-foreground hover:opacity-90"
-                : "bg-white text-foreground hover:bg-white/90"
+                : "bg-white text-foreground hover:bg-white/95"
             }`}
           >
             Partner With Us

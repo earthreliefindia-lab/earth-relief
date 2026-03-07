@@ -22,57 +22,62 @@
 
 @layer base {
   :root {
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Earth Relief Design System — OKLCH raw L C H values */
-    --background: 98 0.005 120;
-    --foreground: 22 0.02 60;
+    /* True near-black #1a1a1a equivalent */
+    --background: 99 0.002 120;
+    --foreground: 13 0.015 60;
 
-    --card: 99 0.003 120;
-    --card-foreground: 22 0.02 60;
+    --card: 100 0 0;
+    --card-foreground: 13 0.015 60;
 
-    --popover: 99 0.003 120;
-    --popover-foreground: 22 0.02 60;
+    --popover: 100 0 0;
+    --popover-foreground: 13 0.015 60;
 
-    --primary: 42 0.16 145;
-    --primary-foreground: 98 0.005 120;
+    /* Vivid eco green #22c55e equivalent */
+    --primary: 63 0.22 145;
+    --primary-foreground: 99 0.003 145;
 
-    --secondary: 72 0.08 145;
-    --secondary-foreground: 22 0.02 60;
+    /* Light green tint for alt section backgrounds */
+    --secondary: 95 0.025 145;
+    --secondary-foreground: 13 0.015 60;
 
-    --muted: 93 0.015 80;
-    --muted-foreground: 55 0.02 60;
+    /* Muted grey — must be readable */
+    --muted: 95 0.008 120;
+    --muted-foreground: 45 0.02 60;
 
-    --accent: 85 0.06 90;
-    --accent-foreground: 22 0.02 60;
+    /* Warm beige accent */
+    --accent: 92 0.025 90;
+    --accent-foreground: 13 0.015 60;
 
     --destructive: 50 0.2 25;
-    --destructive-foreground: 98 0.005 120;
+    --destructive-foreground: 99 0.002 120;
 
-    --border: 88 0.015 120;
-    --input: 88 0.015 120;
-    --ring: 42 0.16 145;
+    /* Subtle green-tinted borders */
+    --border: 90 0.018 145;
+    --input: 90 0.018 145;
+    --ring: 63 0.22 145;
 
-    /* Forest green for dark sections */
-    --forest: 28 0.12 145;
-    --forest-foreground: 95 0.015 120;
+    /* Forest dark for footer / impact section */
+    --forest: 25 0.1 145;
+    --forest-foreground: 96 0.01 145;
 
     /* Chart colors */
-    --chart-1: 42 0.16 145;
-    --chart-2: 62 0.14 145;
-    --chart-3: 75 0.1 145;
-    --chart-4: 85 0.06 90;
-    --chart-5: 55 0.12 145;
+    --chart-1: 63 0.22 145;
+    --chart-2: 75 0.16 145;
+    --chart-3: 82 0.1 145;
+    --chart-4: 88 0.05 90;
+    --chart-5: 50 0.18 145;
 
     /* Sidebar */
-    --sidebar: 98 0.005 120;
-    --sidebar-foreground: 22 0.02 60;
-    --sidebar-primary: 42 0.16 145;
-    --sidebar-primary-foreground: 98 0.005 120;
-    --sidebar-accent: 85 0.06 90;
-    --sidebar-accent-foreground: 22 0.02 60;
-    --sidebar-border: 88 0.015 120;
-    --sidebar-ring: 42 0.16 145;
+    --sidebar: 99 0.002 120;
+    --sidebar-foreground: 13 0.015 60;
+    --sidebar-primary: 63 0.22 145;
+    --sidebar-primary-foreground: 99 0.003 145;
+    --sidebar-accent: 92 0.025 90;
+    --sidebar-accent-foreground: 13 0.015 60;
+    --sidebar-border: 90 0.018 145;
+    --sidebar-ring: 63 0.22 145;
   }
 
   * {
@@ -147,8 +152,32 @@
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 48px -8px oklch(28 0.08 145 / 0.16), 0 4px 16px -4px oklch(22 0.02 60 / 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.13), 0 4px 12px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Premium card shadows */
+  .card-shadow {
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .card-shadow-lg {
+    box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.13), 0 4px 12px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Eyebrow pill */
+  .eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.875rem;
+    border-radius: 9999px;
+    background: oklch(63 0.22 145 / 0.1);
+    color: oklch(47 0.2 145);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid oklch(63 0.22 145 / 0.2);
   }
 }
 

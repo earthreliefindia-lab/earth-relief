@@ -31,15 +31,13 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="py-24 lg:py-32 bg-muted/40"
+      className="py-28 lg:py-40 bg-muted/40"
       data-ocid="products.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            What We Make
-          </span>
+          <span className="eyebrow-pill mb-5 inline-flex">What We Make</span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 tracking-tight">
             Our Products
           </h2>
@@ -80,19 +78,19 @@ function ProductCard({
     <div
       ref={ref}
       data-ocid={`products.item.${index}`}
-      className={`card-hover group rounded-2xl overflow-hidden bg-card border border-border/60 ${
+      className={`card-hover group rounded-3xl overflow-hidden bg-white card-shadow border-0 ${
         index === 2 ? "delay-200" : index === 3 ? "delay-400" : ""
       }`}
     >
       {/* Image */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-64 overflow-hidden">
         <img
           src={image}
           alt={title}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
         <div className="absolute top-4 left-4">
           <span
             className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${badgeColor}`}

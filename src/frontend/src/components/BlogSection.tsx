@@ -51,7 +51,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
     <article
       ref={ref}
       data-ocid={`blog.item.${index + 1}`}
-      className={`card-hover group rounded-2xl bg-card border border-border/60 overflow-hidden flex flex-col ${delay}`}
+      className={`card-hover group rounded-3xl bg-white card-shadow border-0 overflow-hidden flex flex-col ${delay}`}
     >
       <div className="p-6 flex flex-col flex-1">
         {/* Category */}
@@ -102,7 +102,7 @@ function BlogSkeleton({ index: _index }: { index: number }) {
   return (
     <div
       data-ocid="blog.loading_state"
-      className="rounded-2xl bg-card border border-border/60 p-6 space-y-4"
+      className="rounded-3xl bg-white card-shadow border-0 p-6 space-y-4"
     >
       <Skeleton className="h-6 w-24 rounded-full" />
       <Skeleton className="h-7 w-full" />
@@ -127,13 +127,13 @@ export default function BlogSection() {
   return (
     <section
       id="blog"
-      className="py-24 lg:py-32 bg-muted/20"
+      className="py-28 lg:py-40 bg-muted/20"
       data-ocid="blog.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div ref={headerRef} className="text-center mb-14">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            Learn & Grow
+          <span className="eyebrow-pill mb-5 inline-flex">
+            Learn &amp; Grow
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 tracking-tight">
             Knowledge Hub

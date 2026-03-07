@@ -54,14 +54,12 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 lg:py-32 bg-background"
+      className="py-28 lg:py-40 bg-background"
       data-ocid="contact.section"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="inline-block mb-4 text-primary text-xs font-semibold tracking-widest uppercase">
-            Get In Touch
-          </span>
+          <span className="eyebrow-pill mb-5 inline-flex">Get In Touch</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             Contact & Collaboration
           </h2>
@@ -77,7 +75,7 @@ export default function ContactSection() {
             {submitted ? (
               <div
                 data-ocid="contact.success_state"
-                className="text-center p-12 rounded-2xl bg-card border border-primary/20"
+                className="text-center p-12 rounded-3xl bg-white card-shadow border-0"
               >
                 <div className="w-14 h-14 rounded-full bg-primary/15 text-primary flex items-center justify-center mx-auto mb-4">
                   <svg
@@ -111,7 +109,7 @@ export default function ContactSection() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="rounded-2xl bg-card border border-border/60 p-8 space-y-5 shadow-sm"
+                className="rounded-3xl bg-white card-shadow border-0 p-10 space-y-5"
                 noValidate
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -216,7 +214,7 @@ export default function ContactSection() {
             <div className="space-y-4">
               <a
                 href="mailto:hello@earthrelief.org"
-                className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors duration-200 group"
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white card-shadow border-0 hover:shadow-card-lg transition-all duration-200 group"
                 data-ocid="contact.link"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -234,7 +232,7 @@ export default function ContactSection() {
 
               <a
                 href="tel:+911234567890"
-                className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors duration-200 group"
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white card-shadow border-0 hover:shadow-card-lg transition-all duration-200 group"
                 data-ocid="contact.link"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -252,7 +250,7 @@ export default function ContactSection() {
             </div>
 
             {/* Nature image */}
-            <div className="rounded-2xl overflow-hidden aspect-video shadow-md">
+            <div className="rounded-3xl card-shadow overflow-hidden aspect-video">
               <img
                 src="/assets/generated/nature-aerial.dim_1200x600.jpg"
                 alt="Aerial view of pristine nature"
