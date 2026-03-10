@@ -33,9 +33,7 @@ Our goal is simple:
 
 🔬 **Biodegradable plastic alternatives**  
 🌍 **Plastic waste recycling solutions**  
-🚗 **Water-powered engine concept**  
 🛣️ **Plastic waste road technology**  
-♻️ **Self-healing sustainable roads**
 
 ---
 
