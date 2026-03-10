@@ -50,3 +50,9 @@ Our goal is simple:
 "Small innovations can create massive environmental impact."
 
 Let's build a greener planet together 🌱
+## 🌿 Sustainability Focus
+
+![Eco Innovation](https://img.shields.io/badge/Eco%20Innovation-Green-2ecc71?style=for-the-badge&logo=leaflet&logoColor=white)
+![Biodegradable Products](https://img.shields.io/badge/Biodegradable%20Products-Environmental-27ae60?style=for-the-badge&logo=treehouse&logoColor=white)
+![Plastic Free Future](https://img.shields.io/badge/Plastic%20Free%20Future-Earth%20Relief-1abc9c?style=for-the-badge&logo=earth&logoColor=white)
+![Sustainable Tech](https://img.shields.io/badge/Sustainable%20Technology-GreenTech-16a085?style=for-the-badge&logo=greentick&logoColor=white)
