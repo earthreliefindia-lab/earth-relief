@@ -1,288 +1,80 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-/* Cabinet Grotesk — display/heading font */
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+:root {
+  --google-bg: #f8f9fa;
+  --google-card: #ffffff;
+  --google-text: #202124;
+  --google-sub: #5f6368;
+  --earth-green: #1b5e20;
+  --depth-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  --depth-hover: 0 4px 8px 3px rgba(60,64,67,0.15), 0 1px 3px rgba(60,64,67,0.3);
 }
 
-/* General Sans — body font */
-@font-face {
-  font-family: "General Sans";
-  src: url("/assets/fonts/GeneralSans-Variable.woff2") format("woff2");
-  font-weight: 200 700;
-  font-style: normal;
-  font-display: swap;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--google-bg);
+  color: var(--google-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: none; /* Default cursor hide */
+  overflow-x: hidden;
 }
 
-@layer base {
-  :root {
-    --radius: 1rem;
-
-    --background: 99 0.002 120;
-    --foreground: 13 0.015 60;
-
-    --card: 100 0 0;
-    --card-foreground: 13 0.015 60;
-
-    --popover: 100 0 0;
-    --popover-foreground: 13 0.015 60;
-
-    --primary: 63 0.22 145;
-    --primary-foreground: 99 0.003 145;
-
-    --secondary: 95 0.025 145;
-    --secondary-foreground: 13 0.015 60;
-
-    --muted: 95 0.008 120;
-    --muted-foreground: 45 0.02 60;
-
-    --accent: 92 0.025 90;
-    --accent-foreground: 13 0.015 60;
-
-    --destructive: 50 0.2 25;
-    --destructive-foreground: 99 0.002 120;
-
-    --border: 90 0.018 145;
-    --input: 90 0.018 145;
-    --ring: 63 0.22 145;
-
-    --forest: 25 0.1 145;
-    --forest-foreground: 96 0.01 145;
-
-    --chart-1: 63 0.22 145;
-    --chart-2: 75 0.16 145;
-    --chart-3: 82 0.1 145;
-    --chart-4: 88 0.05 90;
-    --chart-5: 50 0.18 145;
-
-    --sidebar: 99 0.002 120;
-    --sidebar-foreground: 13 0.015 60;
-    --sidebar-primary: 63 0.22 145;
-    --sidebar-primary-foreground: 99 0.003 145;
-    --sidebar-accent: 92 0.025 90;
-    --sidebar-accent-foreground: 13 0.015 60;
-    --sidebar-border: 90 0.018 145;
-    --sidebar-ring: 63 0.22 145;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-family: "General Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.65;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Cabinet Grotesk", sans-serif;
-    letter-spacing: -0.02em;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem,5vw,4.5rem);
-    font-weight: 800;
-  }
-
-  h2 {
-    font-size: clamp(2rem,4vw,3rem);
-    font-weight: 700;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  section{
-    padding:120px 8%;
-    position:relative;
-  }
+/* --- CUSTOM LEAF CURSOR --- */
+.leaf-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 28px; height: 28px;
+  pointer-events: none;
+  z-index: 10000;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
 }
 
-@layer utilities {
-
-  /* ===== PREMIUM UI HELPERS ===== */
-
-  .hero-gradient{
-    background:linear-gradient(
-      180deg,
-      oklch(99% 0.003 120),
-      oklch(95% 0.025 145)
-    );
-  }
-
-  .btn-primary{
-    display:inline-block;
-    padding:14px 28px;
-    border-radius:10px;
-    background:oklch(63 0.22 145);
-    color:white;
-    font-weight:600;
-    transition:all .25s ease;
-  }
-
-  .btn-primary:hover{
-    transform:translateY(-2px);
-    background:oklch(58 0.22 145);
-    box-shadow:0 10px 24px -6px oklch(63 0.22 145 / .45);
-  }
-
-  .btn-outline{
-    padding:14px 28px;
-    border-radius:10px;
-    border:1px solid oklch(90 0.018 145);
-    transition:.25s;
-  }
-
-  .btn-outline:hover{
-    background:oklch(95 0.025 145);
-  }
-
-  .card-premium{
-    background:white;
-    border-radius:18px;
-    padding:32px;
-    border:1px solid oklch(90 0.018 145);
-    box-shadow:
-      0 12px 40px -8px rgba(0,0,0,0.12),
-      0 4px 12px -4px rgba(0,0,0,0.06);
-    transition:all .35s cubic-bezier(.22,1,.36,1);
-  }
-
-  .card-premium:hover{
-    transform:translateY(-6px);
-    box-shadow:
-      0 20px 60px -10px rgba(0,0,0,0.18),
-      0 10px 26px -6px rgba(0,0,0,0.12);
-  }
-
-  .impact-number{
-    font-size:3rem;
-    font-weight:800;
-    color:oklch(63 0.22 145);
-  }
-
-  .section-sub{
-    color:oklch(45 0.02 60);
-    font-size:1.15rem;
-    max-width:680px;
-  }
-
-  /* Floating leaf animations */
-
-  .leaf-float {
-    animation: leafFloat 8s ease-in-out infinite;
-  }
-
-  .leaf-float-2 {
-    animation: leafFloat2 11s ease-in-out infinite;
-  }
-
-  .leaf-float-3 {
-    animation: leafFloat3 9s ease-in-out infinite;
-  }
-
-  .leaf-float-4 {
-    animation: leafFloat4 13s ease-in-out infinite;
-  }
-
-  .leaf-float-5 {
-    animation: leafFloat5 10s ease-in-out infinite;
-  }
-
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
-  }
-
-  .fade-in-up.visible {
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  .delay-100 { transition-delay:100ms; }
-  .delay-200 { transition-delay:200ms; }
-  .delay-300 { transition-delay:300ms; }
-  .delay-400 { transition-delay:400ms; }
-  .delay-500 { transition-delay:500ms; }
-
-  .card-hover {
-    transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s cubic-bezier(.22,1,.36,1);
-  }
-
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px -8px rgba(0,0,0,0.13);
-  }
-
-  .eyebrow-pill {
-    display:inline-flex;
-    align-items:center;
-    gap:.375rem;
-    padding:.25rem .875rem;
-    border-radius:9999px;
-    background:oklch(63 0.22 145 / .1);
-    color:oklch(47 0.2 145);
-    font-size:.7rem;
-    font-weight:700;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    border:1px solid oklch(63 0.22 145 / .2);
-  }
+/* --- GLOSSY SKELETON ANIMATION --- */
+.skeleton {
+  background: #e8eaed;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
 }
-
-@keyframes leafFloat {
-  0%,100%{transform:translateY(0) rotate(-12deg)}
-  50%{transform:translateY(-28px) rotate(10deg)}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  animation: mirror-shimmer 1.5s infinite;
 }
+@keyframes mirror-shimmer { 100% { left: 100%; } }
 
-@keyframes leafFloat2 {
-  0%,100%{transform:translateY(0) rotate(8deg)}
-  50%{transform:translateY(-36px) rotate(-10deg)}
+/* --- GOOGLE STYLE LAYOUT --- */
+.navbar {
+  background: white;
+  padding: 16px 8%;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 2px rgba(60,64,67,0.3);
 }
+.logo { font-family: 'Product Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--earth-green); }
 
-@keyframes leafFloat3 {
-  0%,100%{transform:translateY(0) rotate(20deg)}
-  50%{transform:translateY(-44px) rotate(30deg)}
+.material-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--depth-shadow);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
+.material-card:hover { transform: translateY(-4px); box-shadow: var(--depth-hover); }
 
-@keyframes leafFloat4 {
-  0%,100%{transform:translateY(0) rotate(-18deg)}
-  50%{transform:translateY(-32px) rotate(12deg)}
+.btn-primary {
+  background: var(--earth-green); color: white;
+  padding: 12px 28px; border-radius: 30px; border: none;
+  font-weight: 600; cursor: none; transition: 0.3s;
 }
+.btn-primary:hover { opacity: 0.9; box-shadow: var(--depth-hover); }
 
-@keyframes leafFloat5 {
-  0%,100%{transform:translateY(0) rotate(6deg)}
-  50%{transform:translateY(-38px) rotate(-16deg)}
-}
-
-@media (prefers-reduced-motion: reduce){
-  .leaf-float,
-  .leaf-float-2,
-  .leaf-float-3,
-  .leaf-float-4,
-  .leaf-float-5{
-    animation:none;
-  }
-
-  .fade-in-up{
-    opacity:1;
-    transform:none;
-    transition:none;
-  }
-}
+footer { background: white; padding: 60px 8%; text-align: center; border-top: 1px solid #e8eaed; }
+.social-links a { margin: 0 12px; color: var(--google-sub); text-decoration: none; font-weight: 500; cursor: none; }
